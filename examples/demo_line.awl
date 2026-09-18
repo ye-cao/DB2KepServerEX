@@ -1,0 +1,30 @@
+DATA_BLOCK "DemoLine"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+NON_RETAIN
+STRUCT
+   Cmd_Start        : BOOL ; // 启动指令
+   Cmd_Stop         : BOOL ; // 停止指令
+   Cmd_Reset        : BOOL ; // 复位指令
+   St_Running       : BOOL ; // 运行中
+   St_Fault         : BOOL ; // 故障
+   St_Ready         : BOOL ; // 就绪
+   Mode             : BYTE ; // 运行模式 0=手动 1=自动
+   Station_No       : INT ; // 工位号
+   Cycle_Count      : DWORD ; // 生产计数
+   Run_Seconds      : DINT ; // 累计运行秒数
+   Speed_Set        : REAL ; // 速度设定值
+   Speed_Act        : REAL ; // 速度实际值
+   Torque_Act       : REAL ; // 扭矩实际值
+   Temp_Act         : REAL ; // 温度实际值
+   Product_Code     : STRING[16] ; // 产品条码
+   Alarm            : STRUCT
+      Code          : WORD ; // 报警代码
+      Value         : REAL ; // 报警值
+   END_STRUCT ;
+   History          : ARRAY[0..4] of REAL ; // 历史曲线采样
+   Run_Time         : TIME ; // 单次运行时间
+   Last_Change      : DATE_AND_TIME ; // 最后修改时间
+END_STRUCT
+BEGIN
+END_DATA_BLOCK

@@ -1,0 +1,20 @@
+# 统一行尾，避免跨平台 checkout 后满屏 diff
+* text=auto eol=lf
+
+# Windows 批处理必须保持 CRLF
+*.bat text eol=crlf
+
+# 二进制资源
+*.png binary
+*.pdf binary
+*.ico binary
+*.exe binary
+*.syso binary
+
+# 示例源文件保持原始字节，禁止行尾/编码转换：
+#   demo_line.awl   是 GBK 编码
+#   demo_station.db 是 UTF-8 BOM
+#   *.csv           是 UTF-8 BOM + CRLF
+*.awl -text
+*.db  -text
+*.csv -text

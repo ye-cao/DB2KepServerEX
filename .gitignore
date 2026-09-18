@@ -1,1 +1,17 @@
-# placeholder
+# 编译产物（源码仓库不收录二进制）
+*.exe
+*.dll
+
+# 由 tools/make_resources.py 生成的资源目标文件
+app.syso
+
+# 文档构建中间产物
+*.html
+
+# 临时 / 系统文件
+*.tmp
+*.bak
+*.log
+Thumbs.db
+desktop.ini
+.DS_Store

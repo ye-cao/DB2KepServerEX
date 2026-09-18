@@ -1,0 +1,25 @@
+﻿Tag Name,Address,Data Type,Respect Data Type,Client Access,Scan Rate,Scaling,Raw Low,Raw High,Scaled Low,Scaled High,Scaled Data Type,Clamp Low,Clamp High,Eng. Units,Description,Negate Value
+Cmd_Start,"DB10,X0.0",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,启动指令,0
+Cmd_Stop,"DB10,X0.1",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,停止指令,0
+Cmd_Reset,"DB10,X0.2",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,复位指令,0
+St_Running,"DB10,X0.3",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,运行中,0
+St_Fault,"DB10,X0.4",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,故障,0
+St_Ready,"DB10,X0.5",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,就绪,0
+Mode,"DB10,B1",Byte,1,Read/Write,1000,None,0,0,0,0,Byte,0,0,,运行模式 0=手动 1=自动,0
+Station_No,"DB10,I2",Short,1,Read/Write,1000,None,0,0,0,0,Short,0,0,,工位号,0
+Cycle_Count,"DB10,D4",DWord,1,Read/Write,1000,None,0,0,0,0,DWord,0,0,,生产计数,0
+Run_Seconds,"DB10,DI8",Long,1,Read/Write,1000,None,0,0,0,0,Long,0,0,,累计运行秒数,0
+Speed_Set,"DB10,REAL12",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,速度设定值,0
+Speed_Act,"DB10,REAL16",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,速度实际值,0
+Torque_Act,"DB10,REAL20",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,扭矩实际值,0
+Temp_Act,"DB10,REAL24",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,温度实际值,0
+Product_Code,"DB10,STRING28.16",String,1,Read/Write,1000,None,0,0,0,0,String,0,0,,产品条码,0
+Alarm_Code,"DB10,W46",Word,1,Read/Write,1000,None,0,0,0,0,Word,0,0,,报警代码,0
+Alarm_Value,"DB10,REAL48",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,报警值,0
+History[0],"DB10,REAL52",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,历史曲线采样,0
+History[1],"DB10,REAL56",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,历史曲线采样,0
+History[2],"DB10,REAL60",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,历史曲线采样,0
+History[3],"DB10,REAL64",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,历史曲线采样,0
+History[4],"DB10,REAL68",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,历史曲线采样,0
+Run_Time,"DB10,TIME72",String,1,Read/Write,1000,None,0,0,0,0,String,0,0,,单次运行时间,0
+Last_Change,"DB10,DT76",String,1,Read/Write,1000,None,0,0,0,0,String,0,0,,最后修改时间,0

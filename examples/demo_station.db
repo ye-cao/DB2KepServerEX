@@ -1,0 +1,18 @@
+﻿DATA_BLOCK "DemoStation"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+NON_RETAIN
+STRUCT
+   Sensor_1         : BOOL ; // 传感器1
+   Sensor_2         : BOOL ; // 传感器2
+   Sensor_3         : BOOL ; // 传感器3
+   Valve_Open       : BOOL ; // 阀门开到位
+   Valve_Close      : BOOL ; // 阀门关到位
+   Flow_Set         : REAL ; // 流量设定
+   Flow_Act         : REAL ; // 流量实际
+   Total_Liter      : DINT ; // 累计流量(升)
+   Batch_No         : STRING[10] ; // 批次号
+   Recipe_Name      : STRING[20] ; // 配方名称
+END_STRUCT
+BEGIN
+END_DATA_BLOCK

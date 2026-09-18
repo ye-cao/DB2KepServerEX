@@ -1,0 +1,11 @@
+﻿Tag Name,Address,Data Type,Respect Data Type,Client Access,Scan Rate,Scaling,Raw Low,Raw High,Scaled Low,Scaled High,Scaled Data Type,Clamp Low,Clamp High,Eng. Units,Description,Negate Value
+Sensor_1,"DB11,X0.0",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,传感器1,0
+Sensor_2,"DB11,X0.1",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,传感器2,0
+Sensor_3,"DB11,X0.2",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,传感器3,0
+Valve_Open,"DB11,X0.3",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,阀门开到位,0
+Valve_Close,"DB11,X0.4",Boolean,1,Read/Write,1000,None,0,0,0,0,Boolean,0,0,,阀门关到位,0
+Flow_Set,"DB11,REAL2",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,流量设定,0
+Flow_Act,"DB11,REAL6",Float,1,Read/Write,1000,None,0,0,0,0,Float,0,0,,流量实际,0
+Total_Liter,"DB11,DI10",Long,1,Read/Write,1000,None,0,0,0,0,Long,0,0,,累计流量(升),0
+Batch_No,"DB11,STRING14.10",String,1,Read/Write,1000,None,0,0,0,0,String,0,0,,批次号,0
+Recipe_Name,"DB11,STRING26.20",String,1,Read/Write,1000,None,0,0,0,0,String,0,0,,配方名称,0
